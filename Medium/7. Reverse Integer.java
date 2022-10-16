@@ -9,19 +9,19 @@ class Main {
         System.out.println("Reversed Number is "+ reverse(n2));
     }
 
-    static int reverse(int n){
+    static int reverse(int x){
 
         int result = 0;
 
 
-        while(n!=0){
+        while(x!=0){
 
-           int lastDigit = n%10;
+           int lastDigit = x%10;
             int newResult = result*10 + lastDigit;
             if((newResult-lastDigit)/10 != result ){
                 return -1;
             }
-            n /=10;
+            x /=10;
             result = newResult;
         }
         return result;
